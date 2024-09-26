@@ -1,95 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Objeto Virtual de Información</title>
+    <title>Diseño de Sitios Web</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
-        <div class="logo">OVI Base de Datos 1</div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#lecturas">Lecturas</a></li>
-                <li><a href="#multimedia">Multimedia</a></li>
-                <li><a href="#actividades">Actividades</a></li>
-                <li><a href="#autores">Autores</a></li>
-            </ul>
-        </nav>
+        <h1 class="titulo">OVI <br> BASE DE DATOS 1</h1>
     </header>
 
-    <section id="inicio">
-        <h1>Bienvenido al OVI de Base de Datos 1</h1>
-        <p>Este OVI está diseñado para ofrecer una visión integral sobre el tema de bases de datos, incluyendo objetivos de aprendizaje y una introducción general.</p>
-    </section>
+    <nav>
+        <ul>
+            <li><a href="#">INICIO</a></li>
+            <li>
+                <a href="#">LECTURAS</a>
+                <ul class="submenu">
+                    <li><a href="#">Lectura 1</a></li>
+                    <li><a href="#">Lectura 2</a></li>
+                    <li><a href="#">Lectura 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">MULTIMEDIA</a>
+                <ul class="submenu">
+                    <li><a href="#">Video 1</a></li>
+                    <li><a href="#">Video 2</a></li>
+                    <li><a href="#">Video 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">ACTIVIDADES</a>
+                <ul class="submenu">
+                    <li><a href="#">Actividad 1</a></li>
+                    <li><a href="#">Actividad 2</a></li>
+                    <li><a href="#">Actividad 3</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">AUTORES</a>
+                <ul class="submenu">
+                    <li><a href="#">Autor 1</a></li>
+                    <li><a href="#">Autor 2</a></li>
+                    <li><a href="#">Autor 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
 
-    <section id="lecturas">
-        <h2>Lecturas</h2>
-        <article>
-            <h3>Tema 1: Introducción a las Bases de Datos</h3>
-            <img src="ruta/de/tu/imagen1.jpg" alt="Imagen Tema 1">
-            <p>Cita en formato APA: Autor, A. (Año). Título del libro. Editorial.</p>
-        </article>
-        <article>
-            <h3>Tema 2: Modelos de Bases de Datos</h3>
-            <img src="ruta/de/tu/imagen2.jpg" alt="Imagen Tema 2">
-            <p>Cita en formato APA: Autor, B. (Año). Título del artículo. Revista, volumen(número), páginas.</p>
-        </article>
-        <article>
-            <h3>Tema 3: SQL y Consultas</h3>
-            <img src="ruta/de/tu/imagen3.jpg" alt="Imagen Tema 3">
-            <p>Cita en formato APA: Autor, C. (Año). Título del documento. URL.</p>
-        </article>
-        <article>
-            <h3>Tema 4: Administración de Bases de Datos</h3>
-            <img src="ruta/de/tu/imagen4.jpg" alt="Imagen Tema 4">
-            <p>Cita en formato APA: Autor, D. (Año). Título del libro. Editorial.</p>
-        </article>
-        <article>
-            <h3>Tema 5: Tendencias Futuras en Bases de Datos</h3>
-            <img src="ruta/de/tu/imagen5.jpg" alt="Imagen Tema 5">
-            <p>Cita en formato APA: Autor, E. (Año). Título del artículo. Revista, volumen(número), páginas.</p>
-        </article>
-    </section>
+    <section class="container">
+        <section class="section1">
+            <h1 class="titulo2">BIENVENIDO A NUESTRO OVI...!</h1>
+            <div class="content">
+                <img src="icono.jpg" alt="imagen de inicio" class="left-img">
+                <div class="text">
+                    <h2 style="font-size: 25px; color: coral;">Objetivo General</h2>
+                    <p style="font-size: 22px; text-align: justify;"> Proporcionar un recurso completo y accesible para adquirir
+                        los conocimientos básicos necesarios para trabajar con bases de datos. Esto incluye 
+                        desde entender conceptos fundamentales como tablas y registros, hasta aprender a 
+                        utilizar el lenguaje SQL para manipular datos y diseñar bases de datos sencillas. 
+                        La página debe ofrecer contenido claro, ejemplos prácticos, ejercicios interactivos 
+                        y recursos adicionales para facilitar el aprendizaje autónomo. </p>
+                    <br>
+                    <h2 style="font-size: 25px; color: coral;">Bases de Datos</h2>
+                    <p style="font-size: 22px; text-align: justify;"> Las bases de datos son como grandes bibliotecas digitales 
+                        donde se almacena y organiza información de manera sistemática para facilitar su acceso 
+                        y manejo. Imagina una base de datos como una colección de tablas, donde cada tabla 
+                        representa un tema específico (por ejemplo, clientes, productos, pedidos). Dentro de 
+                        cada tabla, hay filas (registros) que contienen información sobre elementos individuales 
+                        (como un cliente en particular), y columnas (campos) que definen los tipos de datos que 
+                        se almacenan (nombre, dirección, teléfono, etc.). </p>
+                </div>
+            </div>
+        </section>
 
-    <section id="multimedia">
-        <h2>Multimedia</h2>
-        <div class="video">
-            <h3>Video 1: Introducción a Bases de Datos</h3>
-            <iframe src="https://www.youtube.com/embed/tu_video1" frameborder="0" allowfullscreen></iframe>
-        </div>
-        <div class="podcast">
-            <h3>Podcast: Entrevista a un Experto</h3>
-            <audio controls>
-                <source src="ruta/de/tu/podcast.mp3" type="audio/mpeg">
-                Tu navegador no soporta el elemento de audio.
-            </audio>
-        </div>
-    </section>
-
-    <section id="actividades">
-        <h2>Actividades</h2>
-        <h3>Actividad 1: Quiz sobre Bases de Datos</h3>
-        <button onclick="alert('Responde las preguntas del quiz!')">Iniciar Quiz</button>
-        <h3>Actividad 2: Debate en Grupo</h3>
-        <button onclick="alert('Únete al debate!')">Unirme</button>
-        <h3>Actividad 3: Proyecto Práctico</h3>
-        <button onclick="alert('Comienza tu proyecto!')">Iniciar Proyecto</button>
-    </section>
-
-    <section id="autores">
-        <h2>Autores</h2>
-        <div class="autor">
-            <img src="ruta/de/tu/foto.jpg" alt="Foto de Sebastián Núñez">
-            <h3>Sebastián Núñez</h3>
-            <p>Email: sebastian.n@example.com</p>
+        <div class="section2">
+            <h2>SÍGUENOS</h2>
+            <p style="font-size: 22px; text-align: justify;"> ¿Quieres profundizar en el fascinante mundo de las bases
+                de datos y mantenerte
+                actualizado con las últimas tendencias? ¡Síguenos en nuestras redes sociales! Allí
+                encontrarás contenido exclusivo, tutoriales prácticos, consejos de expertos y las últimas
+                novedades del sector. Desde los conceptos más básicos hasta las técnicas más avanzadas,
+                nuestra comunidad en línea te brindará la oportunidad de aprender a tu propio ritmo
+                y resolver tus dudas con la ayuda de otros apasionados por las bases de datos.
+                ¡No te pierdas la oportunidad de crecer profesionalmente y conectar con otros profesionales
+                del área! Únete a nuestra comunidad y descubre cómo las bases de datos pueden transformar
+                la forma en que trabajas y vives.</p>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Sebastián Núñez. Todos los derechos reservados.</p>
+        <p>Ing. Sistemas <br>
+            SEBASTIAN NUÑEZ BERRIO <br>
+            UNIVERSIDAD DE CÓRDOBA</p>
     </footer>
 </body>
+
 </html>

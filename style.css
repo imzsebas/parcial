@@ -1,97 +1,132 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(164, 164, 255);
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 20px;
+    text-align: center;
+    background-image: url("menu.jpg");
+    background-size: cover; 
+    background-position: center;
 }
 
-header .logo {
-    margin-left: 20px;
+.container {
+    display: flex; /* Usamos flexbox */
+    justify-content: space-between; /* Espacio entre los elementos */
+    margin: 20px; /* Espaciado externo */
+}
+
+.section1 {
+    flex: 0 0 65%; /* 65% del contenedor para 9 columnas */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(253, 253, 253);
+}
+
+.section2 {
+    flex: 0 0 28%; /* 28% del contenedor para 3 columnas */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(253, 253, 253);
+}
+
+.content {
+    overflow: hidden; /* Asegura que el contenedor ajuste su altura */
+}
+
+.left-img {
+    float: left; /* Permite que el texto fluya alrededor de la imagen */
+    max-width: 40%; /* Ajusta el tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 15px; /* Espaciado entre la imagen y el texto */
+}
+
+.titulo {
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    margin-bottom: 1%;
+    margin-top: 1%;
+    background-color: rgb(76, 176, 194);
+    padding: 15px;
+    color: white;
+    display: inline-block;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.titulo2 {
+    font-size: 40px;
+}
+
+nav {
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: rgb(76, 176, 194);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
+    list-style: none; /* Elimina los puntos de las listas */
+    padding: 0; /* Elimina el padding */
+    margin: 0; /* Elimina el margin */
 }
 
-nav ul li {
-    margin-right: 20px;
+nav li {
+    display: inline-block; /* Muestra los elementos en línea */
+    position: relative; /* Posiciona el submenú relativo a este elemento */
 }
 
-nav ul li a {
-    color: #fff;
+nav a {
+    margin: 0 20px;
     text-decoration: none;
+    font-weight: normal;
+    transition: color 0.3s;
+    color: white;
+    font-size: 15px;
+    padding: 5px 0;
+    position: relative;
 }
 
-section {
-    padding: 20px;
-    margin: 20px;
+nav a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
 }
 
-h1, h2, h3 {
-    margin-bottom: 15px;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-.video, .podcast {
-    margin: 20px 0;
-}
-
-iframe {
+nav a:hover::after,
+nav a:focus::after,
+nav a.active::after {
     width: 100%;
-    height: 315px;
+}
+
+.submenu {
+    display: none; /* Oculta el submenú por defecto */
+    position: absolute; /* Lo coloca sobre otros elementos */
+    background-color: rgb(76, 176, 194); /* Color de fondo del submenú */
+    margin-top: 5px; /* Espacio entre el menú principal y el submenú */
+    z-index: 1000; /* Asegura que el submenú esté sobre otros elementos */
+}
+
+nav li:hover .submenu {
+    display: block; /* Muestra el submenú al pasar el cursor */
 }
 
 footer {
     text-align: center;
-    padding: 10px 0;
-    background: #333;
-    color: #fff;
-}
-
-.autor {
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
-}
-
-.autor img {
-    border-radius: 50%;
-    margin-right: 20px;
-    width: 100px;
-    height: 100px;
-}
-
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav ul li {
-        margin: 10px 0;
-    }
-
-    .autor {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+    padding: 20px;
+    background-color: rgb(76, 176, 194);
+    color: white;
 }
